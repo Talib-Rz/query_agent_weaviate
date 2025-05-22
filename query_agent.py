@@ -9,14 +9,10 @@ from weaviate.classes.config import Configure, Property, DataType
 from weaviate.agents.query import QueryAgent
 from weaviate.agents.utils import print_query_agent_response
 import re
-from dotenv import load_dotenv
 import atexit
 
-
-# Load environment variables
-load_dotenv()
-WEAVIATE_URL = os.getenv("WEAVIATE_URL")
-WEAVIATE_API_KEY = os.getenv("WEAVIATE_API_KEY")
+WEAVIATE_URL = st.secrets.get("WEAVIATE_URL")
+WEAVIATE_API_KEY = st.secrets.get("WEAVIATE_API_KEY")
 
 # Reserved field names
 RESERVED_NAMES = {"id"}
