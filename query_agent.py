@@ -94,7 +94,7 @@ def process_uploaded_files(uploaded_files):
 
 # === Title and Description ===
 st.title("Excel Query Agent (Weaviate)")
-st.markdown("Upload Excel files and ask questions using natural language.")
+st.markdown("Upload Excel files and ask questions using natural language. This agent is better to analyze you excel/csv files containing higher number of text columns")
 
 delete_existing_collections()
 
